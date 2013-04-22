@@ -1,0 +1,25 @@
+# .gitconfig
+[user]
+	name = Jonathan M. Hethey
+	email = youremail
+[color]
+	ui = true
+[alias]
+# my stuff
+	log-ago = "log --pretty=format:'%h - %an, %ar : %s'"
+  flat = "clone --depth 1"
+
+# source: http://cheat.errtheblog.com/s/git
+	st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  dc = diff --cached
+  lg = log -p
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
+
+  # Show files ignored by git:
+  ign = ls-files -o -i --exclude-standard
