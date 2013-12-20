@@ -11,10 +11,10 @@ set tabstop=2
 set shiftwidth=2
 
 " use spaces instead of tabs
-set expandtab
+" set expandtab
 
 " use tabs instead of spaces
-" set noexpandtab
+set noexpandtab
 
 " enable syntax highlight
 syntax on
@@ -28,9 +28,15 @@ set linebreak
 " don't break in the middle of words
 set wrap
 
+" automatically reload changed files (handy for changing branches with git)
+set autoread
+
 " font url: http://www.proggyfonts.com/
 " set guifont=ProggyCleanTT\ 12
-set guifont=Source_Code_Pro_Light:h14,Menlo:h14,Monaco:h14 
+
+" using Source Code Pro
+set anti enc=utf-8
+set guifont=Source\ Code\ Pro\ 11
 
 set wildmenu
 
@@ -57,13 +63,8 @@ let g:instant_markdown_autostart = 0
 " interpret these as markdown
 autocmd BufRead,BufNewFile  *.md,*.MD,*.markdown set filetype=markdown
 
-" color scheme url: http://www.vim.org/scripts/script.php?script_id=2474
-" colorscheme gentooish
-colorscheme Tomorrow-Night-Bright
-
-" MacVim binding to shift tabs with CMD+arrow_left and CMD+arrow_left
-macm Window.Select\ Previous\ Tab  key=<D-Left>
-macm Window.Select\ Next\ Tab	   key=<D-Right>
+" https://github.com/tomasr/molokai
+colorscheme molokai
 
 " indent and unindent like any sane editor
 nnoremap <Tab> >>_
@@ -71,3 +72,9 @@ nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
+
+nmap <C-V> "+gP
+imap <C-V> <ESC><C-V>i
+vmap <C-C> "+y
+
+map <C-T> <ESC>:tabnew<CR>
