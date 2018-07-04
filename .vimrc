@@ -1,32 +1,27 @@
-" abandon legacy support
-set nocompatible
 
-" call pathogen https://github.com/tpope/vim-pathogen
-call pathogen#infect()
+scriptencoding utf-8
+set encoding=utf-8
 
-filetype plugin indent on
+call plug#begin('~/.vim/plugged')
+Plug 'airblade/vim-gitgutter'
+Plug 'rakr/vim-two-firewatch'
+Plug 'morhetz/gruvbox'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
+call plug#end()
 
-" set length of tab to 2 spaces
-set tabstop=2
-set shiftwidth=2
-
-" use spaces instead of tabs
-set expandtab
-
-" use tabs instead of spaces
-" set noexpandtab
-
-" enable syntax highlight
-syntax on
-
-" enable line numbers
+"set background=light
+colo onehalfdark
 set number
-
-" break lines on window border
-set linebreak
-
-" don't break in the middle of words
+set numberwidth=6
+set columns=86
+set colorcolumn=86
+"autocmd VimResized * if (&columns > 86) | set columns=86 | endif
 set wrap
+set linebreak
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set textwidth=80
 
 " automatically reload changed files (handy for changing branches with git)
 set autoread
@@ -35,28 +30,5 @@ set autoread
 set nobackup
 set noswapfile
 
-" no BONK sounds
-set visualbell
-set noerrorbells
-
-set numberwidth=6
-set columns=86
-
-colorscheme gruvbox
-set background=dark
-
-let g:vim_markdown_folding_disabled = 1
-
-let Tlist_Inc_Winwidth=0
-
-" indent and unindent like any sane editor
-nnoremap <Tab> >>_
-nnoremap <S-Tab> <<_
-inoremap <S-Tab> <C-D>
-vnoremap <Tab> >gv
-vnoremap <S-Tab> <gv
-
-nmap <C-V> "+gP
-imap <C-V> <ESC><C-V>i
-vmap <C-C> "+y
+set guifont=FiraCode:h14
 
