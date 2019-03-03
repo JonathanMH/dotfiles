@@ -1,0 +1,34 @@
+{
+  "editor.autoClosingBrackets": false,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": true,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [80],
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 80,
+  "telemetry.enableTelemetry": false,
+  "git.ignoreLegacyWarning": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.welcome.enabled": false,
+  "vim.disableAnnoyingNeovimMessage": true,
+  "window.zoomLevel": 0,
+  "editor.tabSize": 2,
+  "rust.rustup": {
+    "toolchain": "stable-x86_64-unknown-linux-gnu",
+    "nightlyToolchain": "nightly-2016-12-16-x86_64-unknown-linux-gnu"
+  },
+  "vim.useCtrlKeys": false,
+  "materialTheme.fixIconsRunning": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "breadcrumbs.enabled": true,
+  "window.titleBarStyle": "custom",
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.quickSuggestions": false
+  }
+}
